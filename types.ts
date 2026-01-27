@@ -1,4 +1,6 @@
 
+export type Language = 'es' | 'en';
+
 export interface Service {
   id: string;
   title: string;
@@ -17,5 +19,73 @@ export interface ComparisonRow {
   feature: string;
   traditional: string;
   leanEngineering: string;
-  isPositive?: boolean;
+}
+
+export interface SiteContent {
+  nav: {
+    services: string;
+    whyUs: string;
+    calc: string;
+    contact: string;
+    cta: string;
+  };
+  hero: {
+    badge: string;
+    title: string;
+    titleAccent: string;
+    desc: string;
+    ctaPrimary: string;
+    ctaSecondary: string;
+  };
+  services: {
+    title: string;
+    items: Service[];
+  };
+  whyUs: {
+    title: string;
+    titleAccent: string;
+    items: BenefitItem[];
+  };
+  comparison: {
+    title: string;
+    desc: string;
+    thPillar: string;
+    thTrad: string;
+    thLean: string;
+    ctaTitle: string;
+    ctaDesc: string;
+    ctaBtn: string;
+    rows: ComparisonRow[];
+  };
+  calc: {
+    title: string;
+    desc: string;
+    labelBudget: string;
+    labelComplexity: string;
+    complexities: string[];
+    note: string;
+    resultTitle: string;
+    labelFee: string;
+    labelRoi: string;
+    btn: string;
+  };
+  contact: {
+    title: string;
+    desc: string;
+    labels: {
+      name: string;
+      email: string;
+      sector: string;
+      service: string;
+      brief: string;
+      submit: string;
+    };
+    sectors: string[];
+    services: string[];
+    info: {
+      location: string;
+      email: string;
+      phone: string;
+    };
+  };
 }
