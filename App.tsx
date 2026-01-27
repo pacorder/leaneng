@@ -12,7 +12,6 @@ const App: React.FC = () => {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-slate-900 overflow-hidden">
-        {/* Background visual element */}
         <div className="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-l from-blue-600/20 to-transparent pointer-events-none"></div>
         <div className="absolute -bottom-1/4 -right-1/4 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[120px]"></div>
         
@@ -23,39 +22,24 @@ const App: React.FC = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
               </span>
-              <span>Based in Chile • Serving LatAm Infrastructure</span>
+              <span>Basado en Chile • Proyectos en toda LatAm</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
-              Lean Engineering.<br />
+              Ingeniería Lean.<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
-                Massive CAPEX Savings.
+                Ahorros Masivos en CAPEX.
               </span>
             </h1>
             <p className="text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl">
-              Specialized design optimization for construction, energy, and infrastructure. We leverage a elite network of senior freelancers to cut costs by <span className="text-white font-bold">10-25%</span>—at prices far below traditional firms.
+              Optimización de diseño para construcción, energía e infraestructura. Reducimos costos entre un <span className="text-white font-bold">10-25%</span> mediante una red de ingenieros expertos senior.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <a href="#contact" className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white text-lg font-bold rounded-2xl shadow-xl shadow-blue-600/30 transition-all text-center">
-                Optimize My Project
+                Optimizar mi Proyecto
               </a>
               <a href="#services" className="px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white text-lg font-bold rounded-2xl border border-slate-700 transition-all text-center">
-                Our Services
+                Nuestros Servicios
               </a>
-            </div>
-            
-            <div className="mt-16 flex items-center space-x-12 opacity-50 grayscale">
-              <div className="flex flex-col">
-                <span className="text-white text-2xl font-black">100+</span>
-                <span className="text-slate-400 text-xs uppercase tracking-widest font-bold">Projects Optimized</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-white text-2xl font-black">$45M+</span>
-                <span className="text-slate-400 text-xs uppercase tracking-widest font-bold">Client Savings</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-white text-2xl font-black">20+</span>
-                <span className="text-slate-400 text-xs uppercase tracking-widest font-bold">Senior Experts</span>
-              </div>
             </div>
           </div>
         </div>
@@ -65,7 +49,7 @@ const App: React.FC = () => {
       <section id="services" className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4">Core Competencies</h2>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4">Servicios Principales</h2>
             <div className="w-24 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
           </div>
 
@@ -91,39 +75,6 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* Why Us / The Network Section */}
-      <section id="why-us" className="py-24 relative overflow-hidden bg-white">
-        <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-16">
-            <div className="lg:w-1/2">
-              <img 
-                src="https://picsum.photos/id/1070/800/1000" 
-                alt="Engineering Site" 
-                className="rounded-[40px] shadow-2xl object-cover h-[600px] w-full"
-              />
-            </div>
-            <div className="lg:w-1/2">
-              <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-8 leading-tight">
-                The Edge of a <span className="text-blue-600">Lean Network</span>
-              </h2>
-              <div className="space-y-10">
-                {WHY_US.map((item, idx) => (
-                  <div key={idx} className="flex gap-6">
-                    <div className="flex-shrink-0 w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center">
-                      <i className={`fa-solid ${item.icon} text-xl`}></i>
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-bold text-slate-900 mb-2">{item.title}</h4>
-                      <p className="text-slate-600 leading-relaxed">{item.content}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <Comparison />
       <SavingsCalculator />
 
@@ -132,73 +83,39 @@ const App: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="bg-white rounded-[40px] shadow-2xl overflow-hidden flex flex-col lg:flex-row">
             <div className="lg:w-1/3 bg-blue-700 p-12 text-white">
-              <h2 className="text-3xl font-bold mb-6">Let's streamline your project.</h2>
+              <h2 className="text-3xl font-bold mb-6">Hablemos de tu proyecto</h2>
               <p className="text-blue-100 mb-10 text-lg">
-                Send us your design blueprints or project brief for a preliminary savings assessment.
+                Envíanos tus planos o el brief del proyecto para una evaluación preliminar de ahorros.
               </p>
-              
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
                   <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center">
                     <i className="fa-solid fa-location-dot"></i>
                   </div>
-                  <span>Santiago, Chile (LatAm Hub)</span>
+                  <span>Santiago, Chile</span>
                 </div>
                 <div className="flex items-center space-x-4">
                   <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center">
                     <i className="fa-solid fa-envelope"></i>
                   </div>
-                  <span>hello@leanengineering.cl</span>
+                  <span>hola@leanengineering.cl</span>
                 </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center">
-                    <i className="fa-solid fa-phone"></i>
-                  </div>
-                  <span>+56 2 2345 6789</span>
-                </div>
-              </div>
-
-              <div className="mt-16 flex space-x-4 opacity-70">
-                <i className="fa-brands fa-linkedin text-2xl hover:opacity-100 cursor-pointer"></i>
-                <i className="fa-brands fa-x-twitter text-2xl hover:opacity-100 cursor-pointer"></i>
               </div>
             </div>
 
             <div className="lg:w-2/3 p-12">
               <form className="grid sm:grid-cols-2 gap-6" onSubmit={(e) => e.preventDefault()}>
                 <div>
-                  <label className="block text-sm font-bold text-slate-700 mb-2">Full Name</label>
-                  <input type="text" className="w-full bg-slate-50 border border-slate-200 px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" placeholder="John Doe" />
+                  <label className="block text-sm font-bold text-slate-700 mb-2">Nombre Completo</label>
+                  <input type="text" className="w-full bg-slate-50 border border-slate-200 px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" placeholder="Juan Pérez" />
                 </div>
                 <div>
-                  <label className="block text-sm font-bold text-slate-700 mb-2">Email Address</label>
-                  <input type="email" className="w-full bg-slate-50 border border-slate-200 px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" placeholder="john@company.com" />
-                </div>
-                <div>
-                  <label className="block text-sm font-bold text-slate-700 mb-2">Project Sector</label>
-                  <select className="w-full bg-slate-50 border border-slate-200 px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
-                    <option>Infrastructure</option>
-                    <option>Energy / Renewables</option>
-                    <option>Mining</option>
-                    <option>Commercial Construction</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm font-bold text-slate-700 mb-2">Service Needed</label>
-                  <select className="w-full bg-slate-50 border border-slate-200 px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
-                    <option>Design Optimization</option>
-                    <option>Value Engineering</option>
-                    <option>On-demand Support</option>
-                    <option>No-Savings-No-Fee Audit</option>
-                  </select>
-                </div>
-                <div className="sm:col-span-2">
-                  <label className="block text-sm font-bold text-slate-700 mb-2">Project Brief</label>
-                  <textarea rows={4} className="w-full bg-slate-50 border border-slate-200 px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" placeholder="Tell us about your project challenges..."></textarea>
+                  <label className="block text-sm font-bold text-slate-700 mb-2">Correo Electrónico</label>
+                  <input type="email" className="w-full bg-slate-50 border border-slate-200 px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" placeholder="juan@empresa.com" />
                 </div>
                 <div className="sm:col-span-2">
                   <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-5 rounded-2xl transition-all shadow-xl shadow-blue-600/20 transform hover:-translate-y-1">
-                    Submit Request
+                    Enviar Solicitud
                   </button>
                 </div>
               </form>
@@ -207,21 +124,8 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      <footer className="py-12 bg-white border-t border-slate-100">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-slate-400 text-sm">
-          <div className="flex items-center space-x-2 mb-4 md:mb-0">
-             <div className="w-6 h-6 bg-blue-700 rounded-sm flex items-center justify-center text-white">
-              <i className="fa-solid fa-compass-drafting text-[10px]"></i>
-            </div>
-            <span className="font-bold text-slate-900">Lean Engineering Solutions</span>
-          </div>
-          <p>© {new Date().getFullYear()} Lean Engineering SpA. Chile. All rights reserved.</p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-blue-600">Privacy</a>
-            <a href="#" className="hover:text-blue-600">Terms</a>
-            <a href="#" className="hover:text-blue-600">LatAm Logistics</a>
-          </div>
-        </div>
+      <footer className="py-12 bg-white border-t border-slate-100 text-center">
+        <p className="text-slate-400 text-sm">© {new Date().getFullYear()} Lean Engineering SpA. Santiago, Chile.</p>
       </footer>
     </div>
   );
