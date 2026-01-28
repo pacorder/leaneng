@@ -167,33 +167,62 @@ const App: React.FC = () => {
             </div>
 
             <div className="lg:w-2/3 p-12">
-              <form className="grid sm:grid-cols-2 gap-6" onSubmit={(e) => e.preventDefault()}>
+              {/* Formspree Integration */}
+              <form 
+                action="https://formspree.io/f/xdagqzvo" 
+                method="POST"
+                className="grid sm:grid-cols-2 gap-6"
+              >
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-2">{content.contact.labels.name}</label>
-                  <input type="text" className="w-full bg-slate-50 border border-slate-200 px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" />
+                  <input 
+                    name="name"
+                    type="text" 
+                    required
+                    className="w-full bg-slate-50 border border-slate-200 px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" 
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-2">{content.contact.labels.email}</label>
-                  <input type="email" className="w-full bg-slate-50 border border-slate-200 px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" />
+                  <input 
+                    name="email"
+                    type="email" 
+                    required
+                    className="w-full bg-slate-50 border border-slate-200 px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" 
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-2">{content.contact.labels.sector}</label>
-                  <select className="w-full bg-slate-50 border border-slate-200 px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
-                    {content.contact.sectors.map(s => <option key={s}>{s}</option>)}
+                  <select 
+                    name="sector"
+                    className="w-full bg-slate-50 border border-slate-200 px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+                  >
+                    {content.contact.sectors.map(s => <option key={s} value={s}>{s}</option>)}
                   </select>
                 </div>
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-2">{content.contact.labels.service}</label>
-                  <select className="w-full bg-slate-50 border border-slate-200 px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
-                    {content.contact.services.map(s => <option key={s}>{s}</option>)}
+                  <select 
+                    name="service"
+                    className="w-full bg-slate-50 border border-slate-200 px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+                  >
+                    {content.contact.services.map(s => <option key={s} value={s}>{s}</option>)}
                   </select>
                 </div>
                 <div className="sm:col-span-2">
                   <label className="block text-sm font-bold text-slate-700 mb-2">{content.contact.labels.brief}</label>
-                  <textarea rows={4} className="w-full bg-slate-50 border border-slate-200 px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"></textarea>
+                  <textarea 
+                    name="message"
+                    rows={4} 
+                    required
+                    className="w-full bg-slate-50 border border-slate-200 px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+                  ></textarea>
                 </div>
                 <div className="sm:col-span-2">
-                  <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-5 rounded-2xl transition-all shadow-xl shadow-blue-600/20 transform hover:-translate-y-1">
+                  <button 
+                    type="submit"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-5 rounded-2xl transition-all shadow-xl shadow-blue-600/20 transform hover:-translate-y-1"
+                  >
                     {content.contact.labels.submit}
                   </button>
                 </div>
