@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import SavingsCalculator from './components/SavingsCalculator';
 import Comparison from './components/Comparison';
+import WhyChooseUs from './components/WhyChooseUs';
+import TechSphere from './components/TechSphere';
 import { CONTENT } from './constants';
 import { Language } from './types';
 
@@ -29,7 +31,10 @@ const App: React.FC = () => {
 
       {/* Hero Section */}
       <section id="hero" className="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-slate-900 overflow-hidden">
-        <div className="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-l from-blue-600/20 to-transparent pointer-events-none"></div>
+        {/* Animated Background Element */}
+        <TechSphere />
+        
+        <div className="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-l from-blue-600/10 to-transparent pointer-events-none"></div>
         <div className="absolute -bottom-1/4 -right-1/4 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[120px]"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -62,6 +67,42 @@ const App: React.FC = () => {
         </div>
       </section>
 
+      {/* Why Choose Us Inspired Section */}
+      <div id="why-us" className="scroll-mt-20">
+        <WhyChooseUs content={content.whyChoose} />
+      </div>
+
+      {/* Value Creation Models Section */}
+      <section id="value-models" className="py-24 bg-white scroll-mt-20 border-t border-slate-100">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-20">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4">{content.valueModels.title}</h2>
+            <p className="text-slate-600 max-w-2xl mx-auto text-lg">{content.valueModels.description}</p>
+            <div className="w-24 h-1.5 bg-blue-600 mx-auto rounded-full mt-6"></div>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {content.valueModels.items.map((item, idx) => (
+              <div key={idx} className="bg-slate-50 p-8 rounded-3xl border border-slate-200 hover:shadow-lg transition-all flex flex-col h-full">
+                <div className="mb-6">
+                  <span className="text-blue-600 font-bold text-lg">0{idx + 1}</span>
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-slate-900">{item.title}</h3>
+                <p className="text-slate-600 mb-6 text-sm flex-grow">{item.description}</p>
+                <ul className="space-y-3 pt-6 border-t border-slate-200">
+                  {item.points.map((point, i) => (
+                    <li key={i} className="flex items-start text-xs font-semibold text-slate-500">
+                      <i className="fa-solid fa-circle-check text-emerald-500 mr-2 mt-0.5"></i>
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section id="services" className="py-24 bg-slate-50 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4">
@@ -88,39 +129,6 @@ const App: React.FC = () => {
                 </ul>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Us Section */}
-      <section id="why-us" className="py-24 relative overflow-hidden bg-white scroll-mt-20">
-        <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-16">
-            <div className="lg:w-1/2">
-              <img 
-                src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=800&auto=format&fit=crop" 
-                alt="Engineering Team" 
-                className="rounded-[40px] shadow-2xl object-cover h-[500px] w-full"
-              />
-            </div>
-            <div className="lg:w-1/2">
-              <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-8 leading-tight">
-                {content.whyUs.title} <span className="text-blue-600">{content.whyUs.titleAccent}</span>
-              </h2>
-              <div className="space-y-10">
-                {content.whyUs.items.map((item, idx) => (
-                  <div key={idx} className="flex gap-6">
-                    <div className="flex-shrink-0 w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center">
-                      <i className={`fa-solid ${item.icon} text-xl`}></i>
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-bold text-slate-900 mb-2">{item.title}</h4>
-                      <p className="text-slate-600 leading-relaxed">{item.content}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -167,7 +175,6 @@ const App: React.FC = () => {
             </div>
 
             <div className="lg:w-2/3 p-12">
-              {/* Formspree Integration */}
               <form 
                 action="https://formspree.io/f/xdagqzvo" 
                 method="POST"

@@ -9,6 +9,12 @@ export interface Service {
   benefits: string[];
 }
 
+export interface ValueModel {
+  title: string;
+  description: string;
+  points: string[];
+}
+
 export interface BenefitItem {
   title: string;
   content: string;
@@ -19,6 +25,13 @@ export interface ComparisonRow {
   feature: string;
   traditional: string;
   leanEngineering: string;
+}
+
+export interface WhyChooseCard {
+  highlight: string;
+  subtitle: string;
+  title: string;
+  description: string;
 }
 
 export interface SiteContent {
@@ -36,6 +49,21 @@ export interface SiteContent {
     desc: string;
     ctaPrimary: string;
     ctaSecondary: string;
+  };
+  whyChoose: {
+    title: string;
+    description: string;
+    features: {
+      title: string;
+      desc: string;
+    }[];
+    cta: string;
+    cards: WhyChooseCard[];
+  };
+  valueModels: {
+    title: string;
+    description: string;
+    items: ValueModel[];
   };
   services: {
     title: string;
