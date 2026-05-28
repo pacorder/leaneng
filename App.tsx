@@ -171,6 +171,23 @@ const App: React.FC = () => {
                     {content.contact.info.phone}
                   </a>
                 </div>
+                <div className="flex items-center space-x-4">
+                  <div className="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center shadow-lg shadow-emerald-500/30">
+                    <i className="fa-brands fa-whatsapp text-lg"></i>
+                  </div>
+                  <a 
+                    href={`https://wa.me/56952504101?text=${encodeURIComponent(
+                      lang === 'es' 
+                        ? "Nos gustaria conocer mas de LeanENG y sus servicios" 
+                        : "We would like to know more about LeanENG and its services"
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white hover:text-emerald-300 font-semibold transition-colors"
+                  >
+                    WhatsApp Chat
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -242,6 +259,29 @@ const App: React.FC = () => {
       <footer className="py-12 bg-white border-t border-slate-100 text-center">
         <p className="text-slate-400 text-sm">© {new Date().getFullYear()} Lean Engineering Solutions. Santiago, Chile.</p>
       </footer>
+
+      {/* Floating WhatsApp Button */}
+      <a
+        href={`https://wa.me/56952504101?text=${encodeURIComponent(
+          lang === 'es' 
+            ? "Nos gustaria conocer mas de LeanENG y sus servicios" 
+            : "We would like to know more about LeanENG and its services"
+        )}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20ba5a] text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 group cursor-pointer border border-emerald-400/20"
+        aria-label="Contact via WhatsApp"
+        id="whatsapp-floating-button"
+      >
+        {/* Glow pulsing ring element */}
+        <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-40 animate-ping -z-10 group-hover:opacity-60 transition-opacity"></span>
+        
+        <i className="fa-brands fa-whatsapp text-3xl"></i>
+        
+        <span className="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 ease-in-out whitespace-nowrap font-bold text-sm tracking-wide">
+          {lang === 'es' ? 'WhatsApp' : 'Chat with us'}
+        </span>
+      </a>
     </div>
   );
 };
