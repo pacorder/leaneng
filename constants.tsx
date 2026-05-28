@@ -14,7 +14,7 @@ export const CONTENT: Record<'es' | 'en', SiteContent> = {
       badge: 'Expertos en Ingeniería Estructural, Geotécnica y Civil',
       title: 'Ingeniería Lean.',
       titleAccent: 'Optimizamos CAPEX en Energía y Minería.',
-      desc: 'Soporte técnico especializado para proyectos Utility-Scale, Líneas de Transmisión e Infraestructura Minera. Reducimos costos entre un 10-25% mediante una red de ingenieros expertos senior freelance.',
+      desc: 'Soporte técnico especializado para proyectos Utility-Scale, Due Diligence Técnico e Infraestructura Minera. Reducimos costos entre un 10-25% mediante una red de ingenieros expertos senior freelance.',
       ctaPrimary: 'Optimizar mi Proyecto',
       ctaSecondary: 'Nuestras Especialidades'
     },
@@ -97,11 +97,11 @@ export const CONTENT: Record<'es' | 'en', SiteContent> = {
           benefits: ['Optimización de Peso (Acero)', 'Bodegas e Infraestructura', 'Diseño de Racks y Soportes']
         },
         {
-          id: 'power-transmission',
-          title: 'Transmisión y Torres Eléctricas',
-          description: 'Optimización estructural avanzada de torres de alta tensión (celosía y postes). Reducción de CAPEX mediante ingeniería de valor en líneas de transmisión.',
-          icon: 'fa-bolt',
-          benefits: ['Optimización de Torres AT', 'Ingeniería de Detalle', 'Reducción de Materiales']
+          id: 'technical-due-diligence',
+          title: 'Due Diligence Técnico (Civil & Geotécnico)',
+          description: 'Auditorías y evaluaciones técnicas detalladas para proyectos renovables (eólicos y solares). Análisis de riesgos civiles, estudios de fundaciones y geotecnia para garantizar la viabilidad constructiva.',
+          icon: 'fa-clipboard-check',
+          benefits: ['Análisis de Riesgo Civil', 'Evaluación Geotécnica Completa', 'Viabilidad y Análisis CAPEX']
         },
         {
           id: 'seismic-certification',
@@ -169,10 +169,10 @@ export const CONTENT: Record<'es' | 'en', SiteContent> = {
         email: 'Correo Electrónico',
         sector: 'Sector del Proyecto',
         service: 'Especialidad Requerida',
-        brief: 'Resumen (Renovables, Torres, Minería...)',
+        brief: 'Resumen (Renovables, Due Diligence, Minería...)',
         submit: 'Enviar Solicitud de Soporte'
       },
-      sectors: ['Energía Solar / Eólica', 'Sistemas BESS', 'Transmisión Eléctrica', 'Minería / Industrial'],
+      sectors: ['Energía Solar / Eólica', 'Sistemas BESS', 'Due Diligence / Auditorías', 'Minería / Industrial'],
       services: ['Revisión Geotécnica / Fundaciones', 'Optimización Estructural', 'Certificación Sísmica', 'Ingeniería de Valor'],
       info: {
         location: 'Santiago, Chile',
@@ -193,7 +193,7 @@ export const CONTENT: Record<'es' | 'en', SiteContent> = {
       badge: 'Specialists in Structural, Geotechnical & Civil Engineering',
       title: 'Lean Engineering.',
       titleAccent: 'CAPEX Optimization in Energy & Mining.',
-      desc: 'Expert technical support for Utility-Scale projects, Transmission Lines, and Mining Infrastructure. We reduce costs between 10-25% through a network of freelance senior expert engineers.',
+      desc: 'Expert technical support for Utility-Scale projects, Technical Due Diligence, and Mining Infrastructure. We reduce costs between 10-25% through a network of freelance senior expert engineers.',
       ctaPrimary: 'Optimize My Project',
       ctaSecondary: 'Our Specialties'
     },
@@ -276,11 +276,11 @@ export const CONTENT: Record<'es' | 'en', SiteContent> = {
           benefits: ['Steel Weight Optimization', 'Warehouses & Infrastructure', 'Rack & Support Design']
         },
         {
-          id: 'power-transmission',
-          title: 'Power Lines & Transmission Towers',
-          description: 'Advanced structural optimization of high-voltage towers (lattice & poles). CAPEX reduction through value engineering in transmission lines.',
-          icon: 'fa-bolt',
-          benefits: ['HV Tower Optimization', 'Detail Engineering', 'Material Reduction']
+          id: 'technical-due-diligence',
+          title: 'Technical Due Diligence (Civil & Geotechnics)',
+          description: 'Detailed technical assessments and audits for renewable energy plants (wind and solar). Focus on civil risks, foundation evaluation, and geotechnics to secure your investment.',
+          icon: 'fa-clipboard-check',
+          benefits: ['Civil Risk Assessment', 'Full Geotechnical Review', 'CAPEX & Feasibility Analysis']
         },
         {
           id: 'seismic-certification',
@@ -348,10 +348,10 @@ export const CONTENT: Record<'es' | 'en', SiteContent> = {
         email: 'Email',
         sector: 'Project Sector',
         service: 'Required Specialty',
-        brief: 'Project Brief (Renewables, Towers, Mining...)',
+        brief: 'Project Brief (Renewables, Due Diligence, Mining...)',
         submit: 'Send Support Request'
       },
-      sectors: ['Solar / Wind Energy', 'BESS Systems', 'Power Transmission', 'Mining / Industrial'],
+      sectors: ['Solar / Wind Energy', 'BESS Systems', 'Due Diligence / Audits', 'Mining / Industrial'],
       services: ['Geotechnical / Foundation Review', 'Structural Optimization', 'Seismic Certification', 'Value Engineering'],
       info: {
         location: 'Santiago, Chile',
